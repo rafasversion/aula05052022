@@ -12,6 +12,6 @@ con.connect(function(err) {
   var sql = "DROP TABLE informacoes";
   con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("Table deleted");
+    console.log("Tabela deledata!"); //como a tabela foi deletada na aula ela não aparece mais, depois criei outra (amizades) para continuar com os comandos 
   });
 });

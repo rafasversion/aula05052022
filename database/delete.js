@@ -9,8 +9,9 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  con.query("SELECT * FROM amizades", function (err, result, fields) {
+  var sql = "DELETE FROM amizades WHERE endereco = 'Centro'";
+  con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log(result);
+    console.log("Foram deletados: " + result.affectedRows);
   });
 });

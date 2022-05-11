@@ -9,10 +9,10 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  console.log("Conecatado!");
-  var sql = "CREATE TABLE informacoes (nome VARCHAR(255), endereco VARCHAR(255))";
+  console.log("Conectado!");
+  var sql = "CREATE TABLE amizades (id INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(255), endereco VARCHAR(255))";
   con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("Tabela criada!");
+    console.log("Tabela criada");
   });
 });

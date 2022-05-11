@@ -10,14 +10,13 @@ var con = mysql.createConnection({
 con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
-  var sql = "INSERT INTO amizades (nome, endereco) VALUES ?";
+  var sql = "INSERT INTO users (name, favorite_product) VALUES ?";
   var values = [
-    ['Carla', 'Boa Esperança'],
-    ['Henrique', 'Guarita'],
-    ['Karen', 'Centro'],
-    ['Móira', 'Sanga Negra'],
-    ['Gabriel', 'Torres'],
-    ['João', 'Santa Rosa']
+    ['John', '154'],
+    ['Petter', '154'],
+    ['Amy', '155'],
+    ['Hannah', ''],
+    ['Michael', '']
   ];
   con.query(sql, [values], function (err, result) {
     if (err) throw err;

@@ -9,7 +9,7 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  var sql = "UPDATE informacoes SET endereco = 'Loja de celulares' WHERE endereco = 'Shopping'";
+  var sql = "UPDATE amizades SET endereco = 'Sombrio' WHERE endereco = 'Torres'";
   con.query(sql, function (err, result) {
     if (err) throw err;
     console.log(result.affectedRows + " alterados");

@@ -10,15 +10,11 @@ var con = mysql.createConnection({
 con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
-  var sql = "INSERT INTO amizades (nome, endereco) VALUES ?";
+  var sql = "INSERT INTO products (name, id) VALUES ?";
   var values = [
-    ['Carla', 'Boa Esperança'],
-    ['Henrique', 'Guarita'],
-    ['Karen', 'Centro'],
-    ['Móira', 'Sanga Negra'],
-    ['Gabriel', 'Torres'],
-    ['João', 'Santa Rosa']
-  ];
+    ['Chocolate Heaven', '154'],
+    ['Tasty Lemons', '155'],
+    ['Vanilla Dreams', '156']
   con.query(sql, [values], function (err, result) {
     if (err) throw err;
     console.log("Números inseridos: " + result.affectedRows);

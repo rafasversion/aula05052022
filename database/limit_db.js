@@ -9,7 +9,7 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  var sql = "SELECT * FROM informacoes LIMIT 3";
+  var sql = "SELECT * FROM amizades LIMIT 3";
   con.query(sql, function (err, result) {
     if (err) throw err;
     console.log(result);
